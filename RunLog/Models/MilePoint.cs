@@ -10,7 +10,7 @@ namespace RunLog.Models
         public int MilePointId { get; set; }
         public decimal Latitude { get; set; }
         public decimal Longitude { get; set; }
-        public double DistanceInMiles { get; set; }
+        public float DistanceInMiles { get; set; }
 
     }
 }

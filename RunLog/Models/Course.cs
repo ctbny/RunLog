@@ -8,15 +8,27 @@ namespace RunLog.Models
     public class Course
     {
         public int CourseId { get; set; }
+        public string Name { get; set; }
         public DateTime? CreatedBy { get; set; } // StartDateTime of garmin activity that created this course, if available
-        public Single DistanceInMiles { get; set; }
-        public decimal StartingLatitude { get; set; }
-        public decimal StartingLongitude { get; set; }
-        public decimal EndingLatitude { get; set; }
-        public decimal EndingLongitude { get; set; }
-        public Elevation Elevation { get; set; }
+        public float Distance { get; set; }
+        public DistanceUnits DistanceUnits { get; set; }
+        public decimal StartingLat { get; set; }
+        public decimal StartingLong { get; set; }
+        public decimal EndingLat { get; set; }
+        public decimal EndingLong { get; set; }
+        public int EleStart { get; set; }
+        public int EleFinish { get; set; }
+        public int EleGain { get; set; }
+        public int EleLoss { get; set; }
+        public int EleNet { get; set; }
         public virtual List<Trackpoint> Trackpoints { get; set; }
         public virtual List<MilePoint> MilePoints { get; set; }
+
+        public Course()
+        {
+            this.Trackpoints = new List<Trackpoint>();
+            this.MilePoints = new List<MilePoint>();
+        }
 
     }
 }

@@ -22,8 +22,8 @@ namespace RunLog.Models
         Race = 5,
     }
 
-    public enum WorkoutType
-    {
-        Undefined = 0,
-    }
+    //public enum WorkoutType
+    //{
+    //    Undefined = 0,
+    //}
 }
